@@ -15,7 +15,7 @@ ggplot(dataset,aes(x=weight))+
 ggplot(dataset,aes(x=weight))+
   geom_histogram(binwidth = 1,colour="blue",fill="red")
 
-#Adding the main line
+#Adding the mean line
 
 my_plot=ggplot(dataset,aes(x=weight))+
   geom_histogram(binwidth = 1,colour="blue",fill="red")

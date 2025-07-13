@@ -69,7 +69,7 @@ ggplot(df,aes(x=wt,y=mpg,color=cyl))+
   theme(plot.title = element_text(face="bold",size=20,hjust=0.5),
         axis.title=element_text(face="bold",size=14))
 
-#axis text (values) modificatio
+#axis text (values) modification
 
 ggplot(df,aes(x=wt,y=mpg,color=cyl))+
   geom_point(size=3)+
@@ -99,11 +99,12 @@ ggplot(df,aes(x=wt,y=mpg,color=cyl))+
         axis.title=element_text(face="bold",size=14),
         axis.text = element_text(size=10),
         legend.position = "right",
-        legend.title = element_text(face="bold",
-                                    legend.text=element_text(size = 20))
+        legend.title = element_text(face="bold"),
+                    legend.text=element_text(size = 12))
         
 #export plot by coding
-p=plot(df,aes(x=wt,y=mpg,color=cyl))+
+
+p=ggplot(df,aes(x=wt,y=mpg,color=cyl))+
   geom_point(size=3)+
   scale_color_viridis_d(name="Cylinders")+
   labs(title="Fuel Effienciency by Car Weight",x="Weight(1000lbs)",y="Miles per Gallon")+
@@ -112,6 +113,8 @@ p=plot(df,aes(x=wt,y=mpg,color=cyl))+
         axis.title=element_text(face="bold",size=14),
         axis.text = element_text(size=10),
         legend.position = "right",
-        legend.title = element_text(face="bold")
-ggsave("publication_ggplot.png",p,width=6,height=4,)
+        legend.title = element_text(face="bold"),
+        legend.text=element_text(size = 12))
+        
+ggsave("publication_ggplot.png",p,width=6,height=4,dpi=300)
 

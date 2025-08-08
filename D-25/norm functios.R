@@ -25,9 +25,15 @@ qnorm(0.05)
 #dnorm
 Y axis value for z=0
 
+dnorm(0)
 
+#Lets use dnorm to draw the normal distribution
+zvalue=seq(-4.0, 4.0,by=0.1)
 
+zvalue
 
+dvalues=dnorm(zvalue)
 
-
+#plot using d and z values
+plot(zvalue,dvalues)
 

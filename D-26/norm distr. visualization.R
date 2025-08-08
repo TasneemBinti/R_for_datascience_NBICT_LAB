@@ -18,7 +18,7 @@ visualize.norm(stat=c(-3,3),section="tails")
 
 #right tail probability
 1-pnorm(2)
-
+visualize.norm(stat=77,mu=75,sd=1,section="upper")
 visualize.norm(stat=77,mu=75,sd=1,section="lower")
 
 #pnorm (z value)

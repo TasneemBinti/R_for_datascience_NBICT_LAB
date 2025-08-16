@@ -17,3 +17,7 @@ visualize.binom(stat=c(3,7),size=10,prob=0.5, section="tails")
 
 visualize.binom(stat=4,size=10,prob=0.5)
 grid(nx=NULL,ny=NULL,col = "grey",lty="dotted")
+
+visualize.binom(stat=c(4,4),size=10,prob=0.5, section="bounded")
+visualize.binom(stat=c(4,4),size=10,prob=0.5)
+grid(nx=NULL,ny=NULL,col = "grey",lty="dotted")

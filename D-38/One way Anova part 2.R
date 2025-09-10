@@ -69,5 +69,9 @@ aov_res=residuals(object=anova)
 aov_res
 shapiro.test(aov_res)
 
+#If normality doesnt meet
+kruskal.test(weight ~ group, data = PlantGrowth)
+pairwise.wilcox.test(PlantGrowth$weight, PlantGrowth$group,
+                     p.adjust.method = "BH")
 
 
